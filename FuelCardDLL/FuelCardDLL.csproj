@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B12DCEA5-FE99-44B7-A3C9-5C16F925A4A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FuelCardDLL</RootNamespace>
+    <AssemblyName>FuelCardDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindActiveFuelCardNumbersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveFuelCardNumbersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployeeActiveFuelCardNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindEmployeeActiveFuelCardNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindFuelCardEmployeeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindFuelCardEmployeeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FuelCardAssignmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FuelCardAssignmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FuelCardClass.cs" />
+    <Compile Include="InsertFuelCardEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertFuelCardEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateFuelCardActiveEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateFuelCardActiveEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindActiveFuelCardNumbersDataSet.xsc">
+      <DependentUpon>FindActiveFuelCardNumbersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveFuelCardNumbersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveFuelCardNumbersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveFuelCardNumbersDataSet.xss">
+      <DependentUpon>FindActiveFuelCardNumbersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeActiveFuelCardNumberDataSet.xsc">
+      <DependentUpon>FindEmployeeActiveFuelCardNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindEmployeeActiveFuelCardNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindEmployeeActiveFuelCardNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindEmployeeActiveFuelCardNumberDataSet.xss">
+      <DependentUpon>FindEmployeeActiveFuelCardNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindFuelCardEmployeeDataSet.xsc">
+      <DependentUpon>FindFuelCardEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindFuelCardEmployeeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindFuelCardEmployeeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindFuelCardEmployeeDataSet.xss">
+      <DependentUpon>FindFuelCardEmployeeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FuelCardAssignmentDataSet.xsc">
+      <DependentUpon>FuelCardAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FuelCardAssignmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FuelCardAssignmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FuelCardAssignmentDataSet.xss">
+      <DependentUpon>FuelCardAssignmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertFuelCardEntry.xsc">
+      <DependentUpon>InsertFuelCardEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertFuelCardEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertFuelCardEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertFuelCardEntry.xss">
+      <DependentUpon>InsertFuelCardEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateFuelCardActiveEntry.xsc">
+      <DependentUpon>UpdateFuelCardActiveEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateFuelCardActiveEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateFuelCardActiveEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateFuelCardActiveEntry.xss">
+      <DependentUpon>UpdateFuelCardActiveEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
